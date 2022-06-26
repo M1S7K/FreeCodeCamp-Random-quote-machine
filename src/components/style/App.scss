@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-weight: 500;
+  .App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #quote-box {
+      width: 90vw;
+      max-width: 1000px;
+      background-color: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 1rem 1rem 1rem rgba(33, 32, 32, 0.275);
+      .animated[animation='true'] {
+        animation: quote-box-animation  0.5s 1;
+      }
+      #text {
+        text-align: center;
+        font-size: 2.5em;
+        padding: 1.5rem;
+        .textQuote {
+          font-size: 1em;
+          margin-right: 0.4em;
+        }
+      }
+      #author {
+        text-align: end;
+        font-size: 1.5em;
+        padding: 0.5rem 1.5rem 3rem 1.5rem;
+      }
+      #tweet-quote {
+        float: left;
+        padding: 1.2rem;
+        border-radius: 1rem;
+        &:hover {
+          opacity: 0.9;
+        }
+        .twitterLogo {
+          color: white;
+          font-size: 2.8em;
+        }
+      }
+      #new-quote {
+        float: right;
+        padding: 1.5625rem;
+        color: white;
+        font-size: 2em;
+        border-radius: 1rem;
+        border: none;
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
+//animation
+@keyframes quote-box-animation {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
